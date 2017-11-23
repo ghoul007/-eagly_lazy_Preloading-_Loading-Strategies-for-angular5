@@ -1,4 +1,4 @@
-import { LoadChildren, RouterModule, ROUTES } from '@angular/router';
+import { LoadChildren, PreloadAllModules, RouterModule, ROUTES } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 // import { ShopModule} from './shop/shop.module';
@@ -19,7 +19,7 @@ export const routes = [
     HomeComponent
   ],
   imports: [
-    BrowserModule , RouterModule.forRoot(routes)
+    BrowserModule , RouterModule.forRoot(routes,{preloadingStrategy: PreloadAllModules}) 
   ],
   providers: [],
   bootstrap: [AppComponent]
