@@ -7,9 +7,9 @@ import { ConfirmComponent } from './confirm/confirm.component';
 
 
 export const routes = [     
-  { path: 'shop', component: CartComponent },     
-  { path: 'shop/checkout', component: CheckoutComponent },    
-  { path: 'shop/confirm', component: ConfirmComponent } 
+  { path: '', component: CartComponent },     
+  { path: 'checkout', component: CheckoutComponent },    
+  { path: 'confirm', component: ConfirmComponent } 
 ];
 
 

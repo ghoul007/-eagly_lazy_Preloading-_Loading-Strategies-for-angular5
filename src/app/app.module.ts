@@ -1,5 +1,4 @@
-import { ShopModule } from './shop/shop.module';
-import { RouterModule, ROUTES } from '@angular/router';
+import { LoadChildren, RouterModule, ROUTES } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 // import { ShopModule} from './shop/shop.module';
@@ -10,6 +9,7 @@ import { HomeComponent } from './home/home/home.component';
 
 export const routes = [   
 { path: '', component: HomeComponent, pathMatch: 'full' },
+{ path: 'shop', loadChildren: './shop/shop.module#ShopModule'},
 { path: '**', component: HomeComponent }
  ];
 
@@ -19,7 +19,7 @@ export const routes = [
     HomeComponent
   ],
   imports: [
-    BrowserModule , RouterModule.forRoot(routes) ,ShopModule
+    BrowserModule , RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
